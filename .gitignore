@@ -1,0 +1,10 @@
+# CakePHP tmp content
+*/tmp/cache/*
+*/tmp/logs/*
+*/tmp/sessions/*
+*/tmp/tests/*
+
+# system SWAP, TMP and BACKUP files
+*~
+*.swp
+*.bak
