@@ -1,0 +1,15 @@
+create table polls (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                    apenom      VARCHAR(100) NOT NULL,
+                    doc_type    VARCHAR(6) NOT NULL DEFAULT 'dni',
+                    doc_number  INT NOT NULL,
+                    birthdate   TIMESTAMP(8),
+                    state       VARCHAR(10),
+                    fstreet     VARCHAR(100),
+                    fcity       VARCHAR(100),
+                    fprovince   VARCHAR(50),
+                    phone       VARCHAR(25),
+                    email       VARCHAR(50),
+                    sstreet     VARCHAR(100),
+                    scity       VARCHAR(100),
+                    sprovince   VARCHAR(50)
+                    );
