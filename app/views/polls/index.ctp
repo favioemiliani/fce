@@ -4,7 +4,8 @@
 	<tr>
 		<th>Apellido y Nombre</th>
                 <th>TDoc</th>
-                <th>TNu</th>
+                <th>Num</th>
+                <th>ECivil</th>
 	</tr>
 
 <!-- Here's where we loop through our $polls array, printing out poll info -->
@@ -17,6 +18,9 @@
                 </td>
 		<td>
 		        <?php echo $poll['Poll']['doc_number'];?>
+                </td>
+		<td>
+		        <?php echo $poll['Poll']['marital_state'];?>
                 </td>
 	</tr>
 <?php endforeach; ?>
