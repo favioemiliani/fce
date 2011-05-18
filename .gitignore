@@ -1,10 +1,12 @@
-# CakePHP tmp content
-*/tmp/cache/*
-*/tmp/logs/*
-*/tmp/sessions/*
-*/tmp/tests/*
-
 # system SWAP, TMP and BACKUP files
 *~
 *.swp
 *.bak
+
+
+tmp/*
+config/database.php
+app/tmp/*
+app/config/database.php
+!empty
+app/tmp/cache/persistent/cake_core_default_es
