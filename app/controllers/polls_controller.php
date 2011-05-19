@@ -29,13 +29,13 @@ class PollsController extends AppController {
     $data_combine = Set::combine($data_array,'{n}.Province.id','{n}.Province.name');
     $this->set('selectdata',$data_combine);
 
-		if (!empty($this->data)) {
-			if ($this->Poll->save($this->data)) {
-                          $this->flash('Your poll has been saved.', '/polls');
-                          $this->redirect(array('controller' => 'polls', 'action' => 'index'));
-			}
-		}
-	}
+    if (!empty($this->data)) {
+	if ($this->Poll->save($this->data)) {
+           $this->flash('Your poll has been saved.', '/polls');
+           $this->redirect(array('controller' => 'polls', 'action' => 'index'));
+        }
+    }
+  }
 
 	function delete($id) {
 		$this->Poll->delete($id);

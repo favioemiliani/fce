@@ -7,6 +7,8 @@
                 <th>Num</th>
                 <th>ECivil</th>
                 <th>Provincia</th>
+                <th>Carrera a seguir</th>
+
 	</tr>
 
 <!-- Here's where we loop through our $polls array, printing out poll info -->
@@ -26,6 +28,10 @@
                   <td>
                        <?php echo $poll['Province']['name'];;?>
                 </td>
+                <td>
+                       <?php echo $poll['Poll']['degree_to_follow'];;?>
+                </td>
+
 	</tr>
 <?php endforeach; ?>
 
