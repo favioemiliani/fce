@@ -10,11 +10,12 @@ echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Ca
 echo $form->label('Provincia : ');
 echo $form->input('province_id', array('options'  => array($selectdata)));
 
-
 echo $form->label('Cual de las tres carreras pensas seguir?');
+echo $form->radio('degree_to_follow', array('cpn' => 'Contador Público Nacional', 'la' => 'Licenciatura en Administración', 'le' => 'Licenciatura en Economía}'), array('default' => 'cpn', 'legend' =>  false));
 
+echo $form->label('Conocés el Plan de Estudios de la carrera?');
+echo $form->radio('knowdledge', array('si' => 'Si, en forma completa', 'algo' => 'Si, pero en forma parcial', 'no' => 'No lo conozco'), array('default' => 'si', 'legend' =>  false));
 
-echo $form -> radio('degree_to_follow', array('CPN' => 'Contador Público Nacional', 'LA' => 'Licenciatura en Administración', 'LE' => 'Licenciatura en Economía}'), array('default' => 'CPN', 'legend' =>  false));
 
 echo $form->end('Grabar');
 ?>

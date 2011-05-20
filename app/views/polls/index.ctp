@@ -8,6 +8,7 @@
                 <th>ECivil</th>
                 <th>Provincia</th>
                 <th>Carrera a seguir</th>
+                <th>Sabes del Plan de estudios</th>
 
 	</tr>
 
@@ -26,12 +27,14 @@
 		        <?php echo $poll['Poll']['marital_state'];?>
                 </td>
                   <td>
-                       <?php echo $poll['Province']['name'];;?>
+                   <?php echo $poll['Province']['name'];?>
                 </td>
                 <td>
-                       <?php echo $poll['Poll']['degree_to_follow'];;?>
+                  <?php echo $poll['Poll']['degree_to_follow'];?>
                 </td>
-
+                <td>
+                  <?php echo $poll['Poll']['knowdledge'];?>
+                </td>
 	</tr>
 <?php endforeach; ?>
 
