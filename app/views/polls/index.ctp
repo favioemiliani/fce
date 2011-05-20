@@ -13,6 +13,7 @@
                 <th>Area</th>
                 <th>Nombre colegio</th>
                 <th>Tipo</th>
+                <th>Año de graduación</th>
 
 	</tr>
 
@@ -52,10 +53,9 @@
                 <?php echo $poll['Poll']['school_type']; ?>
                </td>
 
-
-
-
-
+                 <td>
+                <?php echo $poll['Poll']['school_year_grad']; ?>
+               </td>
 	</tr>
 <?php endforeach; ?>
 

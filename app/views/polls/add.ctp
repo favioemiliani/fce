@@ -6,7 +6,7 @@ echo $form->label('Tipo de documento : ');
 echo $form->select('doc_type', array('dni' => 'DNI','lc' => 'LC', 'le' => 'LE','pas' => 'PAS'));
 echo $form->input('doc_number', array('label' =>'Número : '));
 echo $form->label('Estado civil : ');
-echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Casdo', 'convivencia' => 'Convivencia'));
+echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Casado', 'convivencia' => 'Convivencia'));
 echo $form->label('Provincia : ');
 echo $form->input('province_id', array('options'  => array($selectdata)));
 
@@ -28,6 +28,8 @@ echo $form->input('school_title', array('label' =>'Título:'));
 echo $form->input('school_area', array('label' =>'Área:'));
 echo $form->input('school_name', array('label' =>'Nombre de la Escuela o Instituto:'));
 echo $form->radio('school_type', array('publica' => 'Pública', 'privada' => 'Privada'), array('default' => 'publica', 'legend' =>  false));
+
+echo $form->input('school_year_grad', array('label' =>'Año de graduacion:', 'size' => 4));
 
 
 echo $form->end('Grabar');

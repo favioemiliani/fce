@@ -7,6 +7,20 @@ class Poll extends AppModel  {
       'rule' => 'notEmpty',        
       'message' => 'Este campo no puede quedar vacio' ),
 
+    'school_year_grad'  => array(         
+      'school_year_gradRule-1' => array(
+        'rule' => 'notEmpty',        
+        'message' => 'Este campo no debe quedar vacio' 
+      ),
+      'school_year_gradRule-2' => array(         
+        'rule' => 'numeric',        
+        'message' => 'Este campo tiene que ser numerico' 
+      ),  
+     'school_year_gradRule-3' => array(         
+        'rule' => array('range', 1950,2010),        
+        'message' => 'Este campo acepta valores entre 1950 y 2010' 
+      )  ),
+
     'doc_number' => array(         
       'doc_numberRule-1' => array(
         'rule' => 'isUnique',        
