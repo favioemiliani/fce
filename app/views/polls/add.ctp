@@ -38,5 +38,41 @@ echo '</b>';
 
 echo $form->radio('school_opinion', array('excelente' => 'Excelente', 'muy bueno' => 'Muy Bueno', 'bueno' => 'Bueno', 'regular' => 'Regular', 'malo' => 'Malo'), array('default' => 'malo', 'legend' =>  false));
 
+
+echo '<b>';
+echo $form->label('Hábitos de estudio');
+echo '</b>';
+
+echo '<b>';
+echo $form->label('Cuántas horas diarias le dedicabas a estudiar en el Secundario?');
+echo '</b>';
+
+echo $form->radio('amount_hours_study', array('0-2' => '0 a 2', '2-4' => '2 a 4', '4-6' => '4 a 6', '+6' => 'Más de 6'), array('default' => '0-2', 'legend' =>  false));
+
+echo '<b>';
+echo $form->label('De qué tipo de material estudiabas?');
+echo '</b>';
+
+echo $form->radio('study_resources', array('libros' => 'Libros de texto', 'apuntes' => 'Apuntes de clase', 'fotocopias' => 'Fotocopias', 'resumen' => 'Resúmenes'), array('default' => 'libros', 'legend' =>  false));
+
+echo '<b>';
+echo $form->label('Dispones de un lugar para estudiar?');
+echo '</b>';
+
+echo $form->radio('study_place', array('si' => 'Si', 'no' => 'No'), array('default' => 'si', 'legend' =>  false));
+
+echo '<b>';
+echo $form->label('Has tomado clases con un profesor particular?');
+echo '</b>';
+
+echo $form->radio('extra_classes', array('si' => 'Si', 'no' => 'No'), array('default' => 'si', 'legend' =>  false));
+
+echo $form->input('extra_classes_subj', array('label' =>'Asignatura:', 'size' => 25));
+
+echo '<b>';
+echo $form->label('Cuáles eran las técnicas o modalidades de estudio que utilizabas?');
+echo '</b>';
+echo $form->textarea('study_techniques');
+
 echo $form->end('Grabar');
 ?>

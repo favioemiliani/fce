@@ -15,7 +15,11 @@
                 <th>Tipo</th>
                 <th>Año de graduación</th>
                 <th>Opinion</th>
-
+                <th>Horas estudio</th>
+                <th>Material</th>
+                <th>Lugar</th>
+                <th>Clases Particular</th>
+                <th>Técnicas de estudio</th>
 	</tr>
 
 <!-- Here's where we loop through our $polls array, printing out poll info -->
@@ -61,6 +65,27 @@
                 <td>
                   <?php echo $poll['Poll']['school_opinion']; ?>
                 </td>
+
+
+                <td>
+                  <?php echo $poll['Poll']['amount_hours_study']; ?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['study_resources']; ?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['study_place']; ?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['extra_classes']; ?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['extra_classes_subj']; ?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['study_techniques']; ?>
+                </td>
+
 	</tr>
 <?php endforeach; ?>
 
