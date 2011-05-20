@@ -74,5 +74,16 @@ echo $form->label('Cuáles eran las técnicas o modalidades de estudio que utili
 echo '</b>';
 echo $form->textarea('study_techniques');
 
+echo '<b>';
+echo $form->label('Preferencias y empleo del tiempo libre');
+echo '</b>';
+
+echo '<b>';
+echo $form->label('Qué tipo de actividades te interesan para usar tu tiempo libre?');
+echo '</b>';
+
+echo $form->radio('hobbies', array('deportes' => 'Deportes', 'artes' => 'Artística', 'culturales' => 'Culturales', 'cientificas' => 'Científicas', 'recreativas' => 'Recreativas', 'Religiosas' => 'religiosas', 'otros' => 'Otros'), array('default' => 'deportes', 'legend' =>  false));
+
+
 echo $form->end('Grabar');
 ?>
