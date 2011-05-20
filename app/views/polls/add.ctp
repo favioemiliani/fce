@@ -10,11 +10,24 @@ echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Ca
 echo $form->label('Provincia : ');
 echo $form->input('province_id', array('options'  => array($selectdata)));
 
+echo '<b>';
 echo $form->label('Cual de las tres carreras pensas seguir?');
+echo '</b>';
 echo $form->radio('degree_to_follow', array('cpn' => 'Contador Público Nacional', 'la' => 'Licenciatura en Administración', 'le' => 'Licenciatura en Economía}'), array('default' => 'cpn', 'legend' =>  false));
 
+echo '<b>';
 echo $form->label('Conocés el Plan de Estudios de la carrera?');
+echo '</b>';
 echo $form->radio('knowdledge', array('si' => 'Si, en forma completa', 'algo' => 'Si, pero en forma parcial', 'no' => 'No lo conozco'), array('default' => 'si', 'legend' =>  false));
+
+echo '<b>';
+echo $form->label('Antecedentes escolares (Secundario)');
+echo '</b>';
+
+echo $form->input('school_title', array('label' =>'Título:'));
+echo $form->input('school_area', array('label' =>'Área:'));
+echo $form->input('school_name', array('label' =>'Nombre de la Escuela o Instituto:'));
+echo $form->radio('school_type', array('publica' => 'Pública', 'privada' => 'Privada'), array('default' => 'publica', 'legend' =>  false));
 
 
 echo $form->end('Grabar');

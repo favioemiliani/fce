@@ -9,6 +9,10 @@
                 <th>Provincia</th>
                 <th>Carrera a seguir</th>
                 <th>Sabes del Plan de estudios</th>
+                <th>Titulo Secundario</th>
+                <th>Area</th>
+                <th>Nombre colegio</th>
+                <th>Tipo</th>
 
 	</tr>
 
@@ -35,6 +39,23 @@
                 <td>
                   <?php echo $poll['Poll']['knowdledge'];?>
                 </td>
+               <td>
+                <?php echo $poll['Poll']['school_title']; ?>
+                </td>
+                <td>
+                <?php echo $poll['Poll']['school_area']; ?>
+                </td>
+                <td>
+                <?php echo $poll['Poll']['school_name']; ?>
+                </td>
+                <td>
+                <?php echo $poll['Poll']['school_type']; ?>
+               </td>
+
+
+
+
+
 	</tr>
 <?php endforeach; ?>
 
