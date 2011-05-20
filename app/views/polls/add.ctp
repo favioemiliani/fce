@@ -32,5 +32,11 @@ echo $form->radio('school_type', array('publica' => 'Pública', 'privada' => 'Pr
 echo $form->input('school_year_grad', array('label' =>'Año de graduacion:', 'size' => 4));
 
 
+echo '<b>';
+echo $form->label('Cuál es tu opinión acerca del nivel de conocimientos adquiridos durante el cursado?');
+echo '</b>';
+
+echo $form->radio('school_opinion', array('excelente' => 'Excelente', 'muy bueno' => 'Muy Bueno', 'bueno' => 'Bueno', 'regular' => 'Regular', 'malo' => 'Malo'), array('default' => 'malo', 'legend' =>  false));
+
 echo $form->end('Grabar');
 ?>

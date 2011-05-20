@@ -14,6 +14,7 @@
                 <th>Nombre colegio</th>
                 <th>Tipo</th>
                 <th>Año de graduación</th>
+                <th>Opinion</th>
 
 	</tr>
 
@@ -21,18 +22,20 @@
 
 <?php foreach ($polls as $poll): ?>
 	<tr>
-		<td><?php echo $poll['Poll']['apenom']; ?></td>
-		<td>
-			<?php echo $poll['Poll']['doc_type'];?>
+                <td>
+                  <?php echo $poll['Poll']['apenom']; ?>
                 </td>
 		<td>
-		        <?php echo $poll['Poll']['doc_number'];?>
+  		  <?php echo $poll['Poll']['doc_type'];?>
                 </td>
 		<td>
-		        <?php echo $poll['Poll']['marital_state'];?>
+                  <?php echo $poll['Poll']['doc_number'];?>
                 </td>
-                  <td>
-                   <?php echo $poll['Province']['name'];?>
+		<td>
+	          <?php echo $poll['Poll']['marital_state'];?>
+                </td>
+                <td>
+                  <?php echo $poll['Province']['name'];?>
                 </td>
                 <td>
                   <?php echo $poll['Poll']['degree_to_follow'];?>
@@ -40,22 +43,24 @@
                 <td>
                   <?php echo $poll['Poll']['knowdledge'];?>
                 </td>
-               <td>
-                <?php echo $poll['Poll']['school_title']; ?>
+                <td>
+                  <?php echo $poll['Poll']['school_title']; ?>
                 </td>
                 <td>
-                <?php echo $poll['Poll']['school_area']; ?>
+                  <?php echo $poll['Poll']['school_area']; ?>
                 </td>
                 <td>
-                <?php echo $poll['Poll']['school_name']; ?>
+                  <?php echo $poll['Poll']['school_name']; ?>
                 </td>
                 <td>
-                <?php echo $poll['Poll']['school_type']; ?>
-               </td>
-
-                 <td>
-                <?php echo $poll['Poll']['school_year_grad']; ?>
-               </td>
+                  <?php echo $poll['Poll']['school_type']; ?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['school_year_grad']; ?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['school_opinion']; ?>
+                </td>
 	</tr>
 <?php endforeach; ?>
 
