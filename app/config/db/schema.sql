@@ -6085,5 +6085,6 @@ create table polls (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                     extra_classes      VARCHAR(10),
                     extra_classes_subj VARCHAR(25),
                     study_techniques   TEXT,
-                    hobbies            VARCHAR(50)
+                    hobbies            VARCHAR(50),
+                    job                VARCHAR(20)
                     );

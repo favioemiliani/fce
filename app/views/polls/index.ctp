@@ -22,6 +22,7 @@
                 <th>Materia</th>
                 <th>Técnicas de estudio</th>
                 <th>Pasatiempos</th>
+                <th>Trabajo</th>
 	</tr>
 
 <!-- Here's where we loop through our $polls array, printing out poll info -->
@@ -89,6 +90,9 @@
                 </td>
                 <td>
                   <?php echo $poll['Poll']['hobbies']; ?>
+                </td>
+               <td>
+                  <?php echo $poll['Poll']['job']; ?>
                 </td>
 
 	</tr>

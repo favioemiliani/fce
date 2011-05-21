@@ -84,6 +84,16 @@ echo '</b>';
 
 echo $form->radio('hobbies', array('deportes' => 'Deportes', 'artes' => 'Artística', 'culturales' => 'Culturales', 'cientificas' => 'Científicas', 'recreativas' => 'Recreativas', 'Religiosas' => 'religiosas', 'otros' => 'Otros'), array('default' => 'deportes', 'legend' =>  false));
 
+echo '<b>';
+echo $form->label('Ocupación laboral');
+echo '</b>';
+
+echo '<b>';
+echo $form->label('Estás trabajando en la actualidad?');
+echo '</b>';
+
+echo $form->radio('job', array('no' => 'No', 'empresa familiar' => 'Si, en empresa familiar', 'Si, en una empresa privada' => 'empresa privada', 'estado' => 'Si, en el Estado'), array('default' => 'no', 'legend' =>  false));
+
 
 echo $form->end('Grabar');
 ?>
