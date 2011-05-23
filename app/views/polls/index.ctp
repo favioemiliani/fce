@@ -8,6 +8,8 @@
                 <th>ECivil</th>
                 <th>EMail</th>
                 <th>Provincia</th>
+                <th>Ciudad</th>
+                <th>Calle y nro</th>
                 <th>Carrera a seguir</th>
                 <th>Sabes del Plan de estudios</th>
                 <th>Titulo Secundario</th>
@@ -47,6 +49,12 @@
                 </td>
                 <td>
                   <?php echo $poll['Province']['name'];?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['city'];?>
+                </td>
+                <td>
+                  <?php echo $poll['Poll']['street'];?>
                 </td>
                 <td>
                   <?php echo $poll['Poll']['degree_to_follow'];?>

@@ -9,6 +9,8 @@ echo $form->label('Estado civil : ');
 echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Casado', 'convivencia' => 'Convivencia'));
 echo $form->label('Provincia : ');
 echo $form->input('province_id', array('options'  => array($selectdata)));
+echo $form->input('city',  array('label' =>'Ciudad : '));
+echo $form->input('street',  array('label' =>'Calle y número : '));
 
 echo $form->input('email',  array('label' =>'Email : '));
 
