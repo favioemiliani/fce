@@ -10,6 +10,8 @@ echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Ca
 echo $form->label('Provincia : ');
 echo $form->input('province_id', array('options'  => array($selectdata)));
 
+echo $form->input('email',  array('label' =>'Email : '));
+
 echo '<b>';
 echo $form->label('Cual de las tres carreras pensas seguir?');
 echo '</b>';

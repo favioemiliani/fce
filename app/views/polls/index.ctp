@@ -6,6 +6,7 @@
                 <th>TDoc</th>
                 <th>Num</th>
                 <th>ECivil</th>
+                <th>EMail</th>
                 <th>Provincia</th>
                 <th>Carrera a seguir</th>
                 <th>Sabes del Plan de estudios</th>
@@ -40,6 +41,9 @@
                 </td>
 		<td>
 	          <?php echo $poll['Poll']['marital_state'];?>
+                </td>
+		<td>
+	          <?php echo $poll['Poll']['email'];?>
                 </td>
                 <td>
                   <?php echo $poll['Province']['name'];?>
