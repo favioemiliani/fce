@@ -7,6 +7,18 @@ class PollsController extends AppController {
   var $order = '';
   var $scaffold;
 
+  var $paginate = array(
+                       'fields' => array('Poll.id', 
+                                         'Poll.apenom',
+                                         'Poll.doc_number',
+                                         'Poll.email',
+                                         'Poll.phone'),
+                        'limit' => 10,        
+                        'order' => array(
+                        'Poll.id' => 'desc'        
+                         )    
+                        );
+
   function index(){
     $this->pageTitle = 'Registros disponibles';
 
@@ -15,7 +27,8 @@ class PollsController extends AppController {
       $fields = array("*");
 
     } else {
-      $this->set('polls', $this->Poll->find('all'));
+      $data = $this->paginate('Poll');    
+      $this->set('polls', $data);
     }
   }
 
