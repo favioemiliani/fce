@@ -6056,6 +6056,12 @@ INSERT INTO cities (id,departaments_id,name) VALUES(5437,566,'YACUCHINA');
 INSERT INTO cities (id,departaments_id,name) VALUES(5438,572,'YANIMAS');
 INSERT INTO cities (id,departaments_id,name) VALUES(5439,571,'YERBA BUENA');
 
+create table users (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL;
+  username VARCHAR(100),
+  password VARCHAR(15),
+  roles VARCHAR(14));
+
 create table polls (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                     apenom             VARCHAR(100) NOT NULL,
                     doc_type           VARCHAR(6) NOT NULL DEFAULT 'dni',
