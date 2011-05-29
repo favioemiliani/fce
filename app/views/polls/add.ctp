@@ -1,4 +1,4 @@
-<h1>Agregar encuesta</h1>
+Agregar encuesta | <?php echo $html->link('Regresar a listado general','/');?>
 <?php
 echo $form->create('Poll');
 echo $form->input('apenom', array('label' =>'Nombre y apellido : '));
