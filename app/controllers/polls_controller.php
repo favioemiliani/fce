@@ -38,10 +38,6 @@ class PollsController extends AppController {
     }
 
     function add() {
-        $data_array = $this->Poll->Province->find('all',array('fields' => array('Province.id','Province.name')));
-        $data_combine = Set::combine($data_array,'{n}.Province.id','{n}.Province.name');
-        $this->set('selectdata',$data_combine);
-
         if (!empty($this->data)) {
             if ($this->Poll->save($this->data)) {
                 $this->flash('Your poll has been saved.', '/polls');

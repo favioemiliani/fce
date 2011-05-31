@@ -29,10 +29,10 @@ echo '</p>';
 echo $poll['Poll']['marital_state'];
 
 echo '<p>';
-echo 'Provincia :';
+echo 'Provincia de origen:';
 echo '</p>';
 
-echo $poll['Poll']['province_id'];
+echo $poll['Poll']['province'];
 echo $poll['Poll']['city'];
 echo $poll['Poll']['street'];
 echo $poll['Poll']['email'];

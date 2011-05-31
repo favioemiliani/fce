@@ -1,7 +1,6 @@
 <?php
 class Poll extends AppModel  {
   var $name = 'Poll';
-  var $belongsTo = array('Province' => array('className' => 'Province'));
 
   var $validate = array(
     'apenom' => array(
