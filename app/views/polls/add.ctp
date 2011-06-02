@@ -1,4 +1,4 @@
-<?php include_once(ROOT.'/app/libs/arrays_values.php') ?>;
+<?php include_once(ROOT.'/app/libs/arrays_values.php') ?>
 
 Agregar encuesta | <?php echo $html->link('Regresar a listado general','/');?>
 <?php
@@ -6,10 +6,17 @@ echo $form->create('Poll');
 echo $form->input('apenom', array('label' =>'Nombre y apellido : '));
 echo $form->label('Tipo de documento : ');
 echo $form->select('doc_type', array('dni' => 'DNI','lc' => 'LC', 'le' => 'LE','pas' => 'PAS'));
-echo $form->input('doc_number', array('label' =>'Número : '));
+echo $form->input('doc_number', array('label' =>'Número : ', 'size' => 8));
 echo $form->label('Estado civil : ');
 echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Casado', 'convivencia' => 'Convivencia'));
-echo $form->input('province', array('options'  => array($provinces) , 'label' => 'Provincia de origen'));
+
+echo '<select name="data[Poll][province]" id="PollProvince">';
+foreach ($provinces as $province) {
+  echo "<option value='".strtolower($province)."'>".$province."</option>";
+}
+echo '</select>';
+
+//echo $form->input('province', array('options'  => array($provinces) , 'label' => 'Provincia de origen'));
 echo $form->input('city', array('options'  => array($cities), 'label' => 'Ciudad de origen'));
 echo $form->input('street',  array('label' =>'Calle y número : '));
 
