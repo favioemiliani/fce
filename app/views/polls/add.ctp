@@ -17,7 +17,15 @@ foreach ($provinces as $province) {
 echo '</select>';
 
 //echo $form->input('province', array('options'  => array($provinces) , 'label' => 'Provincia de origen'));
-echo $form->input('city', array('options'  => array($cities), 'label' => 'Ciudad de origen'));
+//echo $form->input('city', array('options'  => array($cities), 'label' => 'Ciudad de origen'));
+echo '<select name="data[Poll][city]" id="PollCity">';
+foreach ($cities as $citie) {
+  echo "<option value='".strtolower($citie)."'>".$citie."</option>";
+}
+echo '</select>';
+
+
+
 echo $form->input('street',  array('label' =>'Calle y número : '));
 
 echo $form->label('Provincia : ');
