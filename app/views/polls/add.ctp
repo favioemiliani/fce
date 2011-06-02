@@ -10,27 +10,39 @@ echo $form->input('doc_number', array('label' =>'Número : ', 'size' => 8));
 echo $form->label('Estado civil : ');
 echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Casado', 'convivencia' => 'Convivencia'));
 
+//Datos provincia y ciudad de origen
+echo $form->label('Provincia de origen');
 echo '<select name="data[Poll][province]" id="PollProvince">';
 foreach ($provinces as $province) {
   echo "<option value='".strtolower($province)."'>".$province."</option>";
 }
 echo '</select>';
 
-//echo $form->input('province', array('options'  => array($provinces) , 'label' => 'Provincia de origen'));
-//echo $form->input('city', array('options'  => array($cities), 'label' => 'Ciudad de origen'));
+echo $form->label('Ciudad de origen');
 echo '<select name="data[Poll][city]" id="PollCity">';
 foreach ($cities as $citie) {
   echo "<option value='".strtolower($citie)."'>".$citie."</option>";
 }
 echo '</select>';
-
-
-
 echo $form->input('street',  array('label' =>'Calle y número : '));
 
-echo $form->label('Provincia : ');
-echo $form->input('sprovince', array('options'  => array($provinces), 'label' => 'Provincia durantes estudios'));
-echo $form->input('scity', array('options'  => array($cities), 'label' => 'Ciudad durante estudios'));
+
+//Datos provincia y ciudad de origen durante estudios
+echo $form->label('Provincia durante estudios');
+echo '<select name="data[Poll][student_province]" id="PollStudent_province">';
+foreach ($provinces as $province) {
+  echo "<option value='".strtolower($province)."'>".$province."</option>";
+}
+echo '</select>';
+
+
+echo $form->label('Ciudad durante estudios');
+echo '<select name="data[Poll][student_city]" id="PollStudent_city">';
+foreach ($cities as $citie) {
+  echo "<option value='".strtolower($citie)."'>".$citie."</option>";
+}
+echo '</select>';
+
 echo $form->input('sstreet',  array('label' =>'Calle y número : '));
 
 
