@@ -3,6 +3,7 @@
 Agregar encuesta | <?php echo $html->link('Regresar a listado general','/');?>
 <?php
 echo $form->create('Poll');
+echo '<h1>Datos personales</h1>';
 echo $form->input('apenom', array('label' =>'Nombre y apellido : '));
 echo $form->label('Tipo de documento : ');
 echo $form->select('doc_type', array('dni' => 'DNI','lc' => 'LC', 'le' => 'LE','pas' => 'PAS'));
@@ -10,21 +11,41 @@ echo $form->input('doc_number', array('label' =>'Número : ', 'size' => 8));
 echo $form->label('Estado civil : ');
 echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Casado', 'convivencia' => 'Convivencia'));
 
+
+echo '<h1>Domicilio de origen</h1>';
+
+
+echo $form->input('street',  array('label' =>'Calle y número : '));
+
+echo $form->label('Ciudad de origen');
+echo '<select name="data[Poll][city]" id="PollCity">';
+foreach ($cities as $city) {
+  echo "<option value='".strtolower(utf8_encode($city))."'>".utf8_encode($city)."</option>";
+}
+echo '</select>';
+
 //Datos provincia y ciudad de origen
 echo $form->label('Provincia de origen');
 echo '<select name="data[Poll][province]" id="PollProvince">';
 foreach ($provinces as $province) {
-  echo "<option value='".strtolower($province)."'>".$province."</option>";
+  echo "<option value='".strtolower($province)."'>".utf8_encode($province)."</option>";
 }
 echo '</select>';
 
-echo $form->label('Ciudad de origen');
-echo '<select name="data[Poll][city]" id="PollCity">';
-foreach ($cities as $citie) {
-  echo "<option value='".strtolower($citie)."'>".$citie."</option>";
+echo $form->input('phone',  array('label' =>'Teléfono : '));
+
+echo $form->input('email',  array('label' =>'Email : '));
+
+echo '<h1>Domicilio durante cursado</h1>';
+
+echo $form->input('sstreet',  array('label' =>'Calle y número : '));
+
+echo $form->label('Ciudad durante estudios');
+echo '<select name="data[Poll][student_city]" id="PollStudent_city">';
+foreach ($cities as $city) {
+  echo "<option value='".strtolower(utf8_encode($city))."'>".utf8_encode($city)."</option>";
 }
 echo '</select>';
-echo $form->input('street',  array('label' =>'Calle y número : '));
 
 
 //Datos provincia y ciudad de origen durante estudios
@@ -36,17 +57,9 @@ foreach ($provinces as $province) {
 echo '</select>';
 
 
-echo $form->label('Ciudad durante estudios');
-echo '<select name="data[Poll][student_city]" id="PollStudent_city">';
-foreach ($cities as $citie) {
-  echo "<option value='".strtolower($citie)."'>".$citie."</option>";
-}
-echo '</select>';
-
-echo $form->input('sstreet',  array('label' =>'Calle y número : '));
 
 
-echo $form->input('email',  array('label' =>'Email : '));
+
 
 echo '<b>';
 echo $form->label('Cual de las tres carreras pensas seguir?');
