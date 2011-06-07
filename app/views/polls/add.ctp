@@ -79,7 +79,6 @@ echo $form->input('school_title', array('label' =>'Título:'));
 echo $form->input('school_area', array('label' =>'Área:'));
 echo $form->input('school_name', array('label' =>'Nombre de la Escuela o Instituto:'));
 echo $form->radio('school_type', array('publica' => 'Pública', 'privada' => 'Privada'), array('default' => 'publica', 'legend' =>  false));
-
 echo $form->input('school_year_grad', array('label' =>'Año de graduacion:', 'size' => 4));
 
 
@@ -89,6 +88,10 @@ echo '</b>';
 
 echo $form->radio('school_opinion', array('excelente' => 'Excelente', 'muy bueno' => 'Muy Bueno', 'bueno' => 'Bueno', 'regular' => 'Regular', 'malo' => 'Malo'), array('default' => 'malo', 'legend' =>  false));
 
+echo '<b>';
+echo $form->label('Obsevaciónes');
+echo '</b>';
+echo $form->textarea('school_observation');
 
 echo '<b>';
 echo $form->label('Hábitos de estudio');

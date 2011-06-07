@@ -31,7 +31,7 @@ class Poll extends AppModel  {
         'message' => 'Este campo tiene que ser numerico'
       ),
      'doc_numberRule-3' => array(
-        'rule' => array('range', 5000000,35000000),
+        'rule' => array('range', 5000000,38000000),
         'message' => 'Este campo tiene que representarse entre 5000000 y 35000000'
       ),
       'doc_numberRule-4'  => array(
