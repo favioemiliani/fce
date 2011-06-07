@@ -8,6 +8,9 @@ echo $form->input('apenom', array('label' =>'Nombre y apellido : '));
 echo $form->label('Tipo de documento : ');
 echo $form->select('doc_type', array('dni' => 'DNI','lc' => 'LC', 'le' => 'LE','pas' => 'PAS'));
 echo $form->input('doc_number', array('label' =>'Número : ', 'size' => 8));
+
+echo $form->input('birthdate', array('label' =>'Fecha de Nacimiento : ', 'size' => 10));
+
 echo $form->label('Estado civil : ');
 echo $form->select('marital_state', array('soltero' => 'Soltero','casado' => 'Casado', 'convivencia' => 'Convivencia'));
 

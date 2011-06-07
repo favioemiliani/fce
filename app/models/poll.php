@@ -6,6 +6,10 @@ class Poll extends AppModel  {
     'apenom' => array(
       'rule' => 'notEmpty',
       'message' => 'Este campo no puede quedar vacio' ),
+    'birthdate' => array(        
+               'rule' => '/^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/',          
+               'message' => 'Formato valido 16/07/1975'    
+             ),
 
     'school_year_grad'  => array(
       'school_year_gradRule-1' => array(
