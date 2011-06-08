@@ -8,29 +8,35 @@
 ?>
 
 <?php
-echo '<p>';
+echo '<h4>';
 echo 'Nombre y apellido';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['apenom'];
 
 
-echo '<p>';
+echo '<h4>';
 echo 'Tipo y numero de documento';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['doc_type'];
 echo $poll['Poll']['doc_number'];
+echo '<h4>';
+echo 'Fecha de nacimiento :';
+echo '</h4>';
 
-echo '<p>';
+echo $poll['Poll']['birthdate'];
+
+
+echo '<h4>';
 echo 'Estado civil :';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['marital_state'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Provincia de origen:';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['province'];
 echo $poll['Poll']['city'];
@@ -38,21 +44,21 @@ echo $poll['Poll']['street'];
 echo $poll['Poll']['email'];
 
 
-echo '<p>';
+echo '<h4>';
 echo 'Cual de las tres carreras pensas seguir?';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['degree_to_follow'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Conoces el Plan de Estudios de la carrera?';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['knowdledge'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Antecedentes escolares (Secundario)';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['school_title'];
 echo $poll['Poll']['school_area'];
@@ -62,67 +68,67 @@ echo $poll['Poll']['school_type'];
 echo $poll['Poll']['school_year_grad'];
 
 
-echo '<p>';
+echo '<h4>';
 echo 'Cual es tu opinion acerca del nivel de conocimientos adquiridos durante el cursado?';
-echo '</p>';
+echo '</h4>';
 
 echo $poll['Poll']['school_opinion'];
 
 
-echo '<p>';
+echo '<h4>';
 echo 'Habitos de estudio';
-echo '</p>';
+echo '</h4>';
 
 
 echo 'Cuantas horas diarias le dedicabas a estudiar en el Secundario?';
-echo '</p>';
+echo '</h4>';
 
 //echo $poll['Poll']['amount_hours_study'];
 
-echo '<p>';
+echo '<h4>';
 echo 'De que tipo de material estudiabas?';
-echo '</p>';
+echo '</h4>';
 
 //echo $poll['Poll']['study_resources'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Dispones de un lugar para estudiar?';
-echo '</p>';
+echo '</h4>';
 
 //echo $poll['Poll']['study_place'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Has tomado clases con un profesor particular?';
-echo '</p>';
+echo '</h4>';
 
 //echo $poll['Poll']['extra_classes'];
 
 //echo $poll['Poll']['extra_classes_subj'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Cuales eran las tecnicas o modalidades de estudio que utilizabas?';
-echo '</p>';
+echo '</h4>';
 
 //echo $poll['Poll']['study_techniques'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Preferencias y empleo del tiempo libre';
-echo '</p>';
+echo '</h4>';
 
-echo '<p>';
+echo '<h4>';
 echo 'Que tipo de actividades te interesan para usar tu tiempo libre?';
-echo '</p>';
+echo '</h4>';
 
 //echo $poll['Poll']['hobbies'];
 
-echo '<p>';
+echo '<h4>';
 echo 'Ocupacion laboral';
-echo '</p>';
+echo '</h4>';
 
 
-echo '<p>';
+echo '<h4>';
 echo 'Estas trabajando en la actualidad?';
-echo '</p>';
+echo '</h4>';
 
 //echo $poll['Poll']['job'];
 ?>
