@@ -8,57 +8,107 @@
 ?>
 
 <?php
-echo '<h4>';
+echo '<h3>';
 echo 'Nombre y apellido';
-echo '</h4>';
+echo '</h3>';
 
 echo $poll['Poll']['apenom'];
 
 
-echo '<h4>';
+echo '<h3>';
 echo 'Tipo y numero de documento';
-echo '</h4>';
+echo '</h3>';
 
 echo $poll['Poll']['doc_type'];
+echo '<br>';
 echo $poll['Poll']['doc_number'];
-echo '<h4>';
+echo '<h3>';
 echo 'Fecha de nacimiento :';
-echo '</h4>';
+echo '</h3>';
 
 echo $poll['Poll']['birthdate'];
 
 
-echo '<h4>';
+echo '<h3>';
 echo 'Estado civil :';
-echo '</h4>';
+echo '</h3>';
 
 echo $poll['Poll']['marital_state'];
 
+echo '<h3>';
+echo 'Domicilio de origen:';
+echo '</h3>';
 echo '<h4>';
 echo 'Provincia de origen:';
 echo '</h4>';
 
 echo $poll['Poll']['province'];
+
+echo '<br>';
+echo '<h4>';
+echo 'Ciudad de origen:';
+echo '</h4>';
+echo '<br>';
+
 echo $poll['Poll']['city'];
+
+echo '<br>';
+echo '<h4>';
+echo 'Calle y número:';
+echo '</h4>';
+echo '<br>';
 echo $poll['Poll']['street'];
+
+echo '<h3>';
+echo 'Domicilio durante el cursado:';
+echo '</h3>';
+
+echo '<br>';
+echo '<h3>';
+echo 'Email:';
+echo '</h3>';
+echo '<br>';
 echo $poll['Poll']['email'];
 
 
 echo '<h4>';
-echo 'Cual de las tres carreras pensas seguir?';
+echo 'Provincia durante estudios:';
 echo '</h4>';
+
+echo $poll['Poll']['student_province'];
+
+echo '<br>';
+echo '<h3>';
+echo 'Ciudad durante estudios::';
+echo '</h3>';
+echo '<br>';
+
+echo $poll['Poll']['student_city'];
+
+echo '<br>';
+echo '<h3>';
+echo 'Calle y número durante estudios::';
+echo '</h3>';
+echo '<br>';
+echo $poll['Poll']['student_street'];
+
+
+
+echo '<h3>';
+echo 'Cual de las tres carreras pensas seguir?';
+echo '</h3>';
 
 echo $poll['Poll']['degree_to_follow'];
 
-echo '<h4>';
+echo '<h3>';
 echo 'Conoces el Plan de Estudios de la carrera?';
-echo '</h4>';
+echo '</h3>';
 
 echo $poll['Poll']['knowdledge'];
 
-echo '<h4>';
+echo '<h3>';
 echo 'Antecedentes escolares (Secundario)';
-echo '</h4>';
+echo '</h3>';
 
 echo $poll['Poll']['school_title'];
 echo $poll['Poll']['school_area'];
