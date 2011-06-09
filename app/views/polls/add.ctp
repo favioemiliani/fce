@@ -70,6 +70,11 @@ echo '</b>';
 echo $form->radio('degree_to_follow', array('cpn' => 'Contador Público Nacional', 'la' => 'Licenciatura en Administración', 'le' => 'Licenciatura en Economía}'), array('default' => 'cpn', 'legend' =>  false));
 
 echo '<b>';
+echo $form->label('Motivos');
+echo '</b>';
+echo $form->textarea('reasons_to_follow_degree');
+
+echo '<b>';
 echo $form->label('Conocés el Plan de Estudios de la carrera?');
 echo '</b>';
 echo $form->radio('knowdledge', array('si' => 'Si, en forma completa', 'algo' => 'Si, pero en forma parcial', 'no' => 'No lo conozco'), array('default' => 'si', 'legend' =>  false));
@@ -119,6 +124,11 @@ echo '</b>';
 echo $form->radio('study_place', array('si' => 'Si', 'no' => 'No'), array('default' => 'si', 'legend' =>  false));
 
 echo '<b>';
+echo $form->label('Cuál es?');
+echo '</b>';
+echo $form->textarea('where_is_study_place');
+
+echo '<b>';
 echo $form->label('Has tomado clases con un profesor particular?');
 echo '</b>';
 
@@ -140,6 +150,12 @@ echo $form->label('Qué tipo de actividades te interesan para usar tu tiempo lib
 echo '</b>';
 
 echo $form->radio('hobbies', array('deportes' => 'Deportes', 'artes' => 'Artística', 'culturales' => 'Culturales', 'cientificas' => 'Científicas', 'recreativas' => 'Recreativas', 'Religiosas' => 'religiosas', 'otros' => 'Otros'), array('default' => 'deportes', 'legend' =>  false));
+
+echo '<b>';
+echo $form->label('Observaciones');
+echo '</b>';
+
+echo $form->textarea('hobbies_extra_info');
 
 echo '<b>';
 echo $form->label('Ocupación laboral');
