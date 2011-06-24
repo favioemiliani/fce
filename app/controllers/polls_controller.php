@@ -32,6 +32,21 @@ class PollsController extends AppController {
         }
     }
 
+
+    function edition(){
+        $this->pageTitle = 'Registros disponibles';
+
+        if (isset($_GET['namePoll'])) {
+            $conditions = array(" namePoll LIKE '%$_GET[namePoll])%'");
+            $fields = array("*");
+
+        } else {
+            $data = $this->paginate('Poll');
+            $this->set('polls', $data);
+        }
+    }
+
+
     function view($id = null) {
         $this->Poll->id = $id;
         $this->set('poll', $this->Poll->read());
@@ -54,12 +69,6 @@ class PollsController extends AppController {
     }
 
     function edit($id = null) {
-        $data_array = $this->Poll->Province->find('all',array('fields' => array('Province.id',
-                                                                                'Province.provincia')));
-        $data_combine = Set::combine($data_array,'{n}.Province.id','{n}.Province.provincia');
-        $this->set('selectdata',$data_combine);
-
-
         $this->Poll->id = $id;
         if (empty($this->data)) {
             $this->data = $this->Poll->read();

@@ -30,4 +30,7 @@
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
-        Router::connect('/polls/:action/*', array('controller' => 'polls'));
+Router::connect('/polls/:action/*', array('controller' => 'polls'));
+Router::connect('/polls/edition',array('controller' => 'polls', 'action' => 'edition'));
+
+
