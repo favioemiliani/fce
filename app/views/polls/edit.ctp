@@ -1,6 +1,6 @@
 <?php include_once(ROOT.'/app/libs/arrays_values.php') ?>
 
-Agregar encuesta | <?php echo $html->link('Regresar a listado general','/');?>
+<?php echo $html->link('Regresar a listado de edicion','/polls/edition');?>
 <?php
 echo $form->create('Poll');
 echo '<h1>Datos personales</h1>';
