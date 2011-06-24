@@ -64,7 +64,7 @@ class PollsController extends AppController {
     function delete($id) {
         $this->Poll->delete($id);
         $this->flash('The poll with id: '.$id.' has been deleted.', '/polls');
-        $this->redirect(array('controller' => 'polls', 'action' => 'index'));
+        $this->redirect(array('controller' => 'polls', 'action' => 'edition'));
 
     }
 
@@ -75,7 +75,7 @@ class PollsController extends AppController {
         } else {
             if ($this->Poll->save($this->data)) {
                 $this->flash('Your poll has been updated.','/polls');
-                $this->redirect(array('controller' => 'polls', 'action' => 'index'));
+                $this->redirect(array('controller' => 'polls', 'action' => 'edition'));
 
             }
         }
