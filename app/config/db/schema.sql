@@ -31,7 +31,8 @@ create table polls (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                     study_techniques   TEXT,
                     hobbies            VARCHAR(50),
                     hobbies_extra_info TEXT,
-                    job                VARCHAR(20)
+                    job                VARCHAR(20),
+                    user_id            INT NOT NULL
                     );
 
 

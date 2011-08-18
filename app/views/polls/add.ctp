@@ -4,6 +4,9 @@ Agregar encuesta | <?php echo $html->link('Regresar a listado general','/');?>
 <?php
 echo $form->create('Poll');
 echo '<h1>Datos personales</h1>';
+
+echo $form->hidden('user_id', array('value' => $session->read('Auth.User.id')));
+
 echo $form->input('apenom', array('label' =>'Nombre y apellido : '));
 echo $form->label('Tipo de documento : ');
 echo $form->select('doc_type', array('dni' => 'DNI','lc' => 'LC', 'le' => 'LE','pas' => 'PAS'));

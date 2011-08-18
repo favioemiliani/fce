@@ -1,4 +1,6 @@
 <?php
+echo "Estas logeado como " . $session->read('Auth.User.username');
+echo ' | ';
 echo $html->link("Salir de aplicación", "/users/logout");
 echo '<h2>Users';
 echo '<p>' . $html->link('Add User', array('action' => 'add')) . '</p>';

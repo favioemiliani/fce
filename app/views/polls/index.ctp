@@ -1,4 +1,8 @@
 <?php
+    echo "Estas logeado como " . $session->read('Auth.User.username');
+    echo ' | ';
+    echo $html->link("Salir de aplicación", "/users/logout");
+
     echo $form->create('Poll',array('action' => 'search'));
     echo $form->input('Poll.search', array('label' => 'Busqueda'));
     echo $form->end('Buscar');
