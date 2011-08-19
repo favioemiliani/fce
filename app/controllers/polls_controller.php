@@ -6,32 +6,29 @@ class PollsController extends AppController {
     var $fields = '';
     var $order = '';
     var $scaffold;
-
-    var $paginate = array(
-                          'fields' => array('Poll.id',
-                                            'Poll.apenom',
-                                            'Poll.doc_number',
-                                            'Poll.email',
-                                            'Poll.phone'),
-                          'limit' => 10,
-                          'order' => array(
-                                           'Poll.id' => 'desc'
-                                           )
-                          );
-
+  
     function index(){
         $this->pageTitle = 'Registros disponibles';
-
         if (isset($_GET['namePoll'])) {
             $conditions = array(" namePoll LIKE '%$_GET[namePoll])%'");
             $fields = array("*");
 
         } else {
+         $this->paginate = array(
+                          'fields' => array('Poll.id',
+                                            'Poll.apenom',
+                                            'Poll.doc_number',
+                                            'Poll.email',
+                                            'Poll.phone',
+					    'User.username'),
+			  'conditions' => array("Poll.user_id =" => $this->Auth->user('id')),
+                          'limit' => 10,
+                          'order' => array('Poll.id' => 'desc')
+                          );
             $data = $this->paginate('Poll');
             $this->set('polls', $data);
         }
     }
-
 
     function edition(){
         $this->pageTitle = 'Registros disponibles';
@@ -45,7 +42,6 @@ class PollsController extends AppController {
             $this->set('polls', $data);
         }
     }
-
 
     function view($id = null) {
         $this->Poll->id = $id;
@@ -81,7 +77,6 @@ class PollsController extends AppController {
         }
     }
 
-
     function search(){
         if (!empty($this->data)) {
             $searchstr = $this->data['Poll']['search'];
@@ -91,16 +86,12 @@ class PollsController extends AppController {
                                                       'or' => array(
                                                                     "Poll.apenom LIKE" => "%$searchstr%",
                                                                     "Poll.doc_number LIKE" => "%$searchstr%"
-                                                                    )
+                                                                    ),
+							array("Poll.user_id =" => $this->Auth->user('id'))
                                                       )
                                 );
             $this->set('polls', $this->Poll->find('all', $conditions));
         }
     }
-
-
-
   }
-
-
 ?>

@@ -89,6 +89,15 @@ class User extends AppModel {
             ),
         ),
     );
+
+     var $hasMany = array(        
+                     'Poll' => array(            
+                                       'className'     => 'Poll',
+                                       'foreignKey'    => 'user_id',
+                                       'order'    => 'Poll.id DESC'
+                                        )
+                           );  
+
     
     /**
      * Callback function for confirm_password
@@ -106,6 +115,8 @@ class User extends AppModel {
      */
     function validateConfirmPasswordMatch() {
         return $this->data['User']['clear_password'] == $this->data['User']['confirm_password'];
+
+
     }
 }
 ?>

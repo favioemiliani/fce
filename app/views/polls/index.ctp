@@ -1,4 +1,5 @@
 <?php
+    //echo debug($_SESSION);
     echo "Estas logeado como " . $session->read('Auth.User.username');
     echo ' | ';
     echo $html->link("Salir de aplicación", "/users/logout");
@@ -9,7 +10,11 @@
     echo $html->link("Salir de aplicación", "/users/logout");
 ?>
 
-<h1>Encuestas</h1>
+<h1>
+<?php
+  echo "Encuestas cargadas por " . $session->read('Auth.User.username');
+?>
+</h1>
 <p><?php echo $html->link("Agregar encuesta", "/polls/add"); ?>
 <table>
         <tr>
@@ -18,6 +23,7 @@
                 <th>Número de teléfono</th>
                 <th>EMail</th>
         </tr>
+
 
 <!-- Here's where we loop through our $polls array, printing out poll info -->
 
@@ -30,12 +36,11 @@
                   <?php echo $poll['Poll']['doc_number'];?>
                 </td>
                <td>
-                  <?php echo $poll['Poll']['phone']; ?>
+                  <?php echo $poll['Poll']['id']; ?>
                 </td>
                 <td>
                   <?php echo $poll['Poll']['email'];?>
                 </td>
-
         </tr>
 <?php endforeach; ?>
 
